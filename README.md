@@ -77,5 +77,6 @@ Make sure both boards share a common GND connection.
 
 https://youtu.be/2Bm-ze5r-bk
 
+![Description of the image](picture.jpg)
 
 
