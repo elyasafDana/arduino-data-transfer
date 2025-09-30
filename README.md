@@ -16,6 +16,22 @@ The receiver uses **hardware interrupts** to read the data bits in real-time and
 
 ---
 
+## 🧠 How it works
+
+1. **Sender Side**
+   - Waits for a user to input a string via Serial Monitor
+   - Sends each character bit-by-bit (MSB first)
+   - Toggling the clock pin and setting the data pin accordingly
+
+2. **Receiver Side**
+   - Listens for **RISING edge interrupts** on the clock line
+   - Reads one bit on each interrupt from the data line
+   - Accumulates 8 bits into a byte
+   - Appends the character to a string buffer
+   - If no new bits arrive for 2.5 seconds, it prints the full string
+
+---
+
 ## 💡 Why this project?
 
 This project showcases:
@@ -57,21 +73,7 @@ Make sure both boards share a common GND connection.
 
 ---
 
-## 🧠 How it works
 
-1. **Sender Side**
-   - Waits for a user to input a string via Serial Monitor
-   - Sends each character bit-by-bit (MSB first)
-   - Toggling the clock pin and setting the data pin accordingly
-
-2. **Receiver Side**
-   - Listens for **RISING edge interrupts** on the clock line
-   - Reads one bit on each interrupt from the data line
-   - Accumulates 8 bits into a byte
-   - Appends the character to a string buffer
-   - If no new bits arrive for 2.5 seconds, it prints the full string
-
----
 
 ## 🧪 Example
 
