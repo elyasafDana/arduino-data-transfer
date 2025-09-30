@@ -75,5 +75,7 @@ Make sure both boards share a common GND connection.
 
 ## 🧪 Example
 
-### Input (Sender Serial Monitor):
+https://youtu.be/2Bm-ze5r-bk
+
+
 
